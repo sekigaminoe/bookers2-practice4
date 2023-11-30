@@ -1,9 +1,12 @@
 /*!
  * Raty - A Star Rating Plugin
  *
- * author: Washington Botelho
- * github: wbotelhos/raty
- * version: 4.2.0
+ * The MIT License
+ *
+ * author:  Washington Botelho
+ * github:  wbotelhos/raty
+ * version: 4.1.0
+ *
  */
 class Raty {
   /**
@@ -557,7 +560,7 @@ class Raty {
 
     if (this.opt.half) {
       const size = this._getWidth();
-      const percent = parseFloat((evt.pageX - icon.getBoundingClientRect().x) / size);
+      const percent = parseFloat((evt.pageX - icon.offsetLeft) / size);
 
       score = score - 1 + percent;
     }
